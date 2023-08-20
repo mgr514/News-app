@@ -7,7 +7,7 @@
 body {
     background-color:#f3f3f3;
 }
-img{
+img {
     width: 100%;
     height: 30vh;
     object-fit: cover;
@@ -40,7 +40,7 @@ img{
     text-align: center;
 }
 
-.option{
+.option {
     background-color: #d5d5d5;
     border: none;
     cursor: pointer;
@@ -49,7 +49,7 @@ img{
     border: none;
 }
 
-.container{
+.container {
     width: 90%;
     margin: 0 auto;
     display: grid;
