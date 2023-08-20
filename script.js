@@ -50,16 +50,18 @@ const selectCategory = (e, category) => {
         element.classList.remove("active");
     });
     requestURL = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${apiKey}`; 
-    e.target.classList.add(".active");
+    e.target.classList.add("active");
     getNews();
 };
 
-const createOptions= () => {
-    for(let i of options){
-        optionsContainer.innerHTML = `<button class="options ${
+const createOptions = () => {
+    let optionsHTML = "";
+    for(let i of options) {
+        optionsHTML += `<button class="options ${
             i == "general" ? "active" : ""
         }" onclick="selectCategory(event, '${i}')">${i}</button>`;
     }
+    optionsContainer.innerHTML = optionsHTML;
 };
 
 const init = () => {
