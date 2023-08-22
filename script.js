@@ -11,13 +11,16 @@ const options =["general",
 
 let requestURL;
 
+const image_fallback_url = 'https://www.shutterstock.com/shutterstock/photos/1695503806/display_1500/stock-vector-template-for-breaking-news-background-vector-illustration-1695503806.jpg'
+
 const generateUI = (articles) => {
     for(let item of articles) {
+        // console.log(item) // Here we can see all the props available on our API return data for troubleshooting
         let card = document.createElement("div");
         card.classList.add("news-card");
         card.innerHTML = `<div 
         class="news-image-container">
-        <img src="${item.urlToImage || "./newspaper.jpg"}" alt="" />
+        <img src="${item.urlToImage || image_fallback_url}" alt="" />
         </div>
         <div class="news-content">
             <div class="news-title">
